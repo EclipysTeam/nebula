@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="/img/icon.jpg" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de IPs</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .copy-button {
+      background-color: #7e57c2;
+      color: white;
+      padding: 5px 10px;
+      font-size: 14px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .copy-button:hover {
+      background-color: #6942a5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <ul>
+      <li>wss://mc.asspixel.net/ <button class="copy-button" onclick="copyText('wss://mc.asspixel.net/')">Copy</button></li>
+      <li>wss://zentic.cc <button class="copy-button" onclick="copyText('wss://zentic.cc')">Copy</button></li>
+      <li>wss://legxndsmp.minecraft.pe <button class="copy-button" onclick="copyText('wss://legxndsmp.minecraft.pe')">Copy</button></li>
+      <li>wss://asianf4rmer.minecraft.pe <button class="copy-button" onclick="copyText('wss://asianf4rmer.minecraft.pe')">Copy</button></li>
+    </ul>
+  </div>
+  <a href="menu.html">Back to Menu</a>
+
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text)
+        .then(function () {
+          alert("Copied IP: " + text);
+        })
+        .catch(function () {
+          alert("Failed to copy IP.");
+        });
+    }
+  </script>
+</body>
+
+</html>
